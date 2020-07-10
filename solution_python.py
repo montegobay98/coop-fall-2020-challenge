@@ -48,6 +48,8 @@ class EventSourcer():
         for i in range(steps):
             if len(self.event_history) > 0:
                 self.undo()
+            else:
+                break
 
     # Runtime complexity: O(N)
     def bulk_redo(self, steps: int):
